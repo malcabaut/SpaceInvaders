@@ -392,7 +392,7 @@ var level1State = {
         game.muros = game.add.group();
         game.muros.enableBody = true;
         game.muroDanio = game.make.bitmapData(ancho, alto);
-        game.muroDanio.circle(8, 8, 8, 'rgba(0, 27, 7, 1)');  // rgba(255,0,255,0.2)
+        game.muroDanio.circle(9, 9, 9, 'rgba(0, 27, 7, 1)');  // rgba(255,0,255,0.2)
         game.muroMapas = [];
 		// Creamos tantos muros en pantalla como hayamos descrito
         for (var x = 1; x <= totalBases; x++) {
