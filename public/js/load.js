@@ -59,6 +59,7 @@ var loadState = {
 		game.load.spritesheet('botonSilenciar', 'assets/buttons/boton_volumen-mute.png', 34, 34);
 		game.load.spritesheet('botonVolumen', 'assets/buttons/boton_volumen-sound.png', 34, 34);
 		game.load.bitmapFont('gem', 'assets/fonts/bitmapFonts/gem.png', 'assets/fonts/bitmapFonts/gem.xml');
+		game.load.image('loginGoogle','assets/buttons/boton_google.png');
 		// Si ejecutamos el juego desde el móvil cargamos el pad virtual
 		if (!game.escritorio) {
 			game.load.spritesheet('gamepad', 'assets/buttons/gamepad_spritesheet.png', 100, 100);

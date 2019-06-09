@@ -20,8 +20,10 @@ var menuState = {
 		// Agregamos botón silenciar junto con sus manejadores para controlar sus eventos
 		game.btnSilenciar = game.add.button(game.world.right - 40, game.world.height - 50, 'botonSilenciar', this.manejadorClickBotonSilenciar, this, 0, 1, 0);
 		game.btnSilenciar.onInputOver.add(this.manejadorOverBoton, this);
+		// Agregamos botón loginGoogle 
+		game.lgnGoogle = game.add.button(game.world.left + 40, game.world.height - 50, 'loginGoogle', this.manejadorClickBotonGoogle, this, 0, 1, 0);
 		// Inicializamos valores e iniciamos la carga de las estrellas en pantalla
-		this.cargarLogo();
+				this.cargarLogo();
 		game.global.cargarEstrellas();
 		this.inicializarParametros();
 	},	
