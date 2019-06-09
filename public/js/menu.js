@@ -17,6 +17,9 @@ var menuState = {
 		game.btnJugar.onInputOver.add(this.manejadorOverBoton, this);
 		game.btnOpciones.onInputOver.add(this.manejadorOverBoton, this);
 		game.btnPuntuaciones.onInputOver.add(this.manejadorOverBoton, this);
+		// Agregamos botón silenciar junto con sus manejadores para controlar sus eventos
+		game.btnSilenciar = game.add.button(game.world.right - 40, game.world.height - 50, 'botonSilenciar', this.manejadorClickBotonSilenciar, this, 0, 1, 0);
+		game.btnSilenciar.onInputOver.add(this.manejadorOverBoton, this);
 		// Inicializamos valores e iniciamos la carga de las estrellas en pantalla
 		this.cargarLogo();
 		game.global.cargarEstrellas();
@@ -69,6 +72,17 @@ var menuState = {
 		// Reproducimos audio y llamamos al estado score para mostrar la pantalla de puntuaciones
 		game.sfxStart.play();
 		game.state.start('score');
+	},
+
+	/**
+	 * Función usada para controlar el evento click en el botón silenciar
+	 * @method manejadorClickBotonSilenciar
+	 */
+	manejadorClickBotonSilenciar: function() {
+		// Activamos o desactivamos el audio en nuestro juego y cambiamos la imagen mostrada
+		game.sound.mute = !game.sound.mute;
+		game.btnSilenciar.loadTexture((game.sound.mute) ? 'botonVolumen' : 'botonSilenciar');
+		game.sfxStart.play();
 	},
 		
 	/**
